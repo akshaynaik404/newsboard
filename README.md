@@ -39,9 +39,9 @@ Either build an app yourself like this one (ema-john) or build one of your own. 
 3. Manage a state in at least one component 
 4. Load data (fake data or real data from any api) by using component life cycle
 
-
+## Contact us
 For any further help please whatsApp @ 
-"Imran shaikh": +91 9923820706  or "Pratik Upacharya" : 7588948588
+`"Imran shaikh": +91 9923820706  or "Pratik Upacharya" : 7588948588`
 
 
 `Email : pune.javascripters@gmail.com`
