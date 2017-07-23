@@ -40,6 +40,8 @@ Either build an app yourself like this one (ema-john) or build one of your own. 
 4. Load data (fake data or real data from any api) by using component life cycle
 
 
-For any further help please whatsApp @ "Imran shaikh": +91 9923820706  or 
-                                     "Pratik Upacharya" : 7588948588
-Email : pune.javascripters@gmail.com
+For any further help please whatsApp @ 
+"Imran shaikh": +91 9923820706  or "Pratik Upacharya" : 7588948588
+
+
+`Email : pune.javascripters@gmail.com`
