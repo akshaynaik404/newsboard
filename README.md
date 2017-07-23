@@ -30,9 +30,6 @@ form sourcetree GUI:
 https://confluence.atlassian.com/get-started-with-sourcetree/install-and-set-up-sourcetree-847359043.html
 
 https://www.sourcetreeapp.com/
-
-For any further help please whatsApp "Imran shaikh": +91 9923820706  or 
-                                     "Pratik Upacharya" : 7588948588
  
 
 ### Assignment Details
@@ -41,3 +38,8 @@ Either build an app yourself like this one (ema-john) or build one of your own. 
 2. Pass data to the child component by using props and read those in the child component 
 3. Manage a state in at least one component 
 4. Load data (fake data or real data from any api) by using component life cycle
+
+
+For any further help please whatsApp @ "Imran shaikh": +91 9923820706  or 
+                                     "Pratik Upacharya" : 7588948588
+Email : pune.javascripters@gmail.com
