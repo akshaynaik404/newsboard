@@ -7,8 +7,10 @@
      //From terminal 
      git clone https://github.com/javascripters-community/thatjsdude.git
 
-#### Step 2: create new branch and submit your changes as a pull request we will validate the code quality and provide you the comment accoringly.
-      // please use branch name like  "assignment_by_<<your full name>>",example :       "assignment_by_imran_shaikh"
+#### Step 2: create new branch and submit your changes as a pull request. We will validate the code quality and provide you the comment accoringly.
+      /** please use branch name like  "assignment_by_<<your full name>>",
+        * example :       "assignment_by_imran_shaikh"
+        **/
 
       git checkout -b [name_of_your_new_branch]  
       
