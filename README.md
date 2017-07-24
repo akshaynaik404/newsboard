@@ -1,3 +1,37 @@
+This repository is a submission for ReactJS assignment of [Online Webinar - ReactJS Beginner Level](https://youtu.be/nzCjk66PWOk)
+<br />
+If selected you will get a chance to attend [Online Webiner - ReactJS Advance Level](https://www.youtube.com/watch?v=ty0rznt10Mg)
+<br />
+This is the source code for [Newsboard - Read and Share News](https://newsboard.tk) application.
+
+## Assignment Requirements
+
+- [x] At least three component
+- [ ] Pass data to the child component by using props and read those in the child component
+- [x] Manage a state in at least one component
+- [x] Load data (fake data or real data from any api) by using component life cycle
+
+## Usage
+
+This app is supposed to serve users who consume news and share local news articles.
+
+## How it works
+
+As of now the application renders latest news articles from [The Next Web](https://thenextweb.com) using [News API](https://newsapi.org/).
+<br />
+UI components are generated using latest version of [Material-UI](https://github.com/callemall/material-ui/) component library.
+
+## Quick Installation
+
+1. Clone this repo.
+2. Execute `npm install` or `yarn` on your terminal.
+3. Execute `npm start` or `yarn start`.
+4. Navigate to [http://localhost:3000](http://localhost:3000)
+
+<hr />
+
+## Original README.md
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -1760,7 +1794,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
