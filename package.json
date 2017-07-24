@@ -1,8 +1,11 @@
 {
-  "name": "thatjsdude",
+  "name": "newsboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
+    "material-ui": "next",
+    "material-ui-icons": "^1.0.0-alpha.19",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10"
