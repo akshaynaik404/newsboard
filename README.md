@@ -7,7 +7,7 @@ This is the source code for [Newsboard - Read and Share News](https://newsboard.
 ## Assignment Requirements
 
 - [x] At least three component
-- [ ] Pass data to the child component by using props and read those in the child component
+- [x] Pass data to the child component by using props and read those in the child component
 - [x] Manage a state in at least one component
 - [x] Load data (fake data or real data from any api) by using component life cycle
 

@@ -7,7 +7,7 @@ import createPalette from 'material-ui/styles/palette';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import PostList from './components/PostList';
+import NewsItems from './components/NewsItems';
 
 import themeObject from './config/themeObject';
 
@@ -21,7 +21,7 @@ const App = () =>
     <AppWrapper>
       <div>
         <Header />
-        <PostList />
+        <NewsItems />
         <Footer />
       </div>
 
