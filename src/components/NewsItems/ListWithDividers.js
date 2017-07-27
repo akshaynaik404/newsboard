@@ -22,15 +22,16 @@ function ListWithDividers (props) {
     <List className={props.classes.root}>
       {
         props.listItems.map(function (news) {
+					console.log(news);
           return (
-            <div key={news.publishedAt}>
+            <a style={{textDecoration: 'none'}} href={news.url} target="_blank" key={news.publishedAt}>
               <ListItem button>
                 <ListItemText
                 primary={news.title}
                 />
                 </ListItem>
               <Divider light/>
-            </div>
+            </a>
           )
         })
       }
