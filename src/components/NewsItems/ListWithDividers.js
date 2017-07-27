@@ -13,7 +13,7 @@ const styleSheet = createStyleSheet('NewsItems', theme => ({
 }));
 
 ListWithDividers.propTypes = {
-	newsItems: PropTypes.array.isRequired
+	listItems: PropTypes.array.isRequired
 };
 
 
@@ -21,7 +21,7 @@ function ListWithDividers (props) {
   return (
     <List className={props.classes.root}>
       {
-        props.newsItems.map(function (news) {
+        props.listItems.map(function (news) {
           return (
             <div key={news.publishedAt}>
               <ListItem button>
