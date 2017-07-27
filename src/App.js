@@ -1,30 +1,57 @@
-import React from 'react';
-import {
-  MuiThemeProvider,
-  createMuiTheme
-} from 'material-ui/styles';
+import React, { Component } from 'react';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import createPalette from 'material-ui/styles/palette';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import NewsItems from './components/NewsItems';
-
+import Header from 'components/Header';
+import NewsItems from 'components/NewsItems';
 import themeObject from './config/themeObject';
+import api from 'api';
 
-const theme = createMuiTheme({
-  palette: createPalette(themeObject),
-});
+const theme = createMuiTheme({palette: createPalette( themeObject )});
 
 const AppWrapper = props => props.children;
-const App = () =>
-  <MuiThemeProvider theme={theme}>
-    <AppWrapper>
-      <div>
-        <Header />
-        <NewsItems />
-        <Footer />
-      </div>
+class App extends Component {
+	constructor( props ) {
+		super( props );
+		this.state = {
+			isLoading: true,
+			error: null,
+			newsItems: [ ]
+		};
+		this.componentDidMount = this
+			.componentDidMount
+			.bind( this );
+		this.setError = this
+			.setError
+			.bind( this );
+	}
+	componentDidMount( ) {
+		api
+			.getNewsItems( )
+			.then(res => {
+				this.setState({ newsItems: res.data.articles, isLoading: false, error: null });
+			})
+			.catch(err => {
+				this.setState({ isLoading: false, error: err });
+			});
+	}
 
-    </AppWrapper>
-  </MuiThemeProvider>;
+	setError( err ) {
+		this.setState({ error: err })
+	}
+	render( ) {
+		const { newsItems, isLoading, error } = this.state;
+		return (
+			<MuiThemeProvider theme={theme}>
+				<AppWrapper>
+					<div>
+						<Header/>
+						<NewsItems newsItems={newsItems} error={error} reload={this.componentDidMount} isLoading={isLoading} setError={this.setError}/>
+					</div>
+				</AppWrapper>
+			</MuiThemeProvider>
+		)
+	}
+}
+
 export default App;
