@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
-import { CircularProgress } from 'material-ui/Progress';
 import green from 'material-ui/colors/green';
 import Button from 'material-ui/Button';
-import CheckIcon from 'material-ui-icons/Check';
-import SaveIcon from 'material-ui-icons/Save';
+import Autorenew from 'material-ui-icons/Autorenew';
 
 const styleSheet = createStyleSheet('CircularFab', {
   wrapper: {
-    position: 'relative',
-  },
-  successButton: {
-    backgroundColor: green[500],
-    '&:hover': {
-      backgroundColor: green[700],
-    },
+    position: 'fixed',
+    right: '10vw',
+    bottom: '10vw'
   },
   progress: {
     color: green[500],
@@ -26,51 +20,19 @@ const styleSheet = createStyleSheet('CircularFab', {
 });
 
 class CircularFab extends Component {
-  state = {
-    loading: false,
-    success: false,
-  };
-
-  componentWillUnmount() {
-    clearTimeout(this.timer);
-  }
 
   handleButtonClick = () => {
-    if (!this.state.loading) {
-      this.setState(
-        {
-          success: false,
-          loading: true,
-        },
-        () => {
-          this.timer = setTimeout(() => {
-            this.setState({
-              loading: false,
-              success: true,
-            });
-          }, 2e3);
-        },
-      );
-    }
+    this.props.reload();
   };
 
-  timer = undefined;
-
   render() {
-    const { loading, success } = this.state;
     const classes = this.props.classes;
-    let buttonClass = '';
-
-    if (success) {
-      buttonClass = classes.successButton;
-    }
 
     return (
       <div className={classes.wrapper}>
-        <Button fab color="primary" className={buttonClass} onClick={this.handleButtonClick}>
-          {success ? <CheckIcon /> : <SaveIcon />}
+        <Button fab color="accent" onClick={this.handleButtonClick}>
+          <Autorenew />
         </Button>
-        {loading && <CircularProgress size={60} className={classes.progress} />}
       </div>
     );
   }

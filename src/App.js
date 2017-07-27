@@ -6,6 +6,7 @@ import Header from 'components/Header';
 import NewsItems from 'components/NewsItems';
 import themeObject from './config/themeObject';
 import api from 'api';
+import FabBtn from 'components/FabBtn';
 
 const theme = createMuiTheme({palette: createPalette( themeObject )});
 
@@ -18,16 +19,15 @@ class App extends Component {
 			error: null,
 			newsItems: [ ]
 		};
-		this.componentDidMount = this
-			.componentDidMount
-			.bind( this );
-		this.setError = this
-			.setError
-			.bind( this );
+		this.componentDidMount = this.componentDidMount.bind( this );
+		this.setError = this.setError.bind( this );
 	}
-	componentDidMount( ) {
+	componentDidMount() {
+		this.setState({
+			isLoading: true
+		});
 		api
-			.getNewsItems( )
+			.getNewsItems()
 			.then(res => {
 				this.setState({ newsItems: res.data.articles, isLoading: false, error: null });
 			})
@@ -39,14 +39,21 @@ class App extends Component {
 	setError( err ) {
 		this.setState({ error: err })
 	}
-	render( ) {
+	render() {
 		const { newsItems, isLoading, error } = this.state;
 		return (
 			<MuiThemeProvider theme={theme}>
 				<AppWrapper>
 					<div>
 						<Header/>
-						<NewsItems newsItems={newsItems} error={error} reload={this.componentDidMount} isLoading={isLoading} setError={this.setError}/>
+						<NewsItems
+							newsItems={newsItems}
+							error={error}
+							reload={this.componentDidMount}
+							isLoading={isLoading}
+							setError={this.setError}
+						/>
+					<FabBtn reload={this.componentDidMount} />
 					</div>
 				</AppWrapper>
 			</MuiThemeProvider>
