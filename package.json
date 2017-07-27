@@ -11,10 +11,13 @@
     "react-scripts": "1.0.10"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "cross-env NODE_PATH=src react-scripts start",
+    "build": "cross-env NODE_PATH=src react-scripts build",
+    "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
+    "eject": "cross-env NODE_PATH=src react-scripts eject",
     "deploy": "npm run build && firebase deploy && echo \"Built and Deployed successfully\""
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1"
   }
 }
