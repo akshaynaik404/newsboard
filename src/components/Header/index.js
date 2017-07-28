@@ -7,10 +7,10 @@ import Typography from 'material-ui/Typography';
 
 const styleSheet = createStyleSheet('SimpleAppBar', {
   root: {
-    marginBottom: 8
+    marginBottom: 8,
   },
   flex: {
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
 });
 

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import { CircularProgress } from 'material-ui/Progress';
 
-const styleSheet = createStyleSheet('Loader', theme => ({
+const styleSheet = createStyleSheet('Loader', () => ({
   progress: {
-    marginTop: '64px'
+    marginTop: '64px',
   },
   progressContainer: {
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 }));
 
 function Loader(props) {

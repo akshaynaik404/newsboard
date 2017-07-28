@@ -14,10 +14,15 @@ const styleSheet = createStyleSheet('CircularFab', {
 });
 
 class CircularFab extends Component {
+  constructor(props) {
+    super(props);
 
-  handleButtonClick = () => {
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+  }
+
+  handleButtonClick() {
     this.props.reload();
-  };
+  }
 
   render() {
     const classes = this.props.classes;
@@ -34,6 +39,7 @@ class CircularFab extends Component {
 
 CircularFab.propTypes = {
   classes: PropTypes.object.isRequired,
+  reload: PropTypes.func.isRequired,
 };
 
 export default withStyles(styleSheet)(CircularFab);

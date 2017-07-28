@@ -10,18 +10,21 @@ const styleSheet = createStyleSheet('SimpleBottomNavigation', {
   root: {
     width: '100%',
     position: 'fixed',
-    bottom: 0
+    bottom: 0,
   },
 });
 
 class SimpleBottomNavigation extends Component {
-  state = {
-    value: 0,
-  };
+  constructor() {
+    super();
+    this.state = {
+      value: 0,
+    };
+  }
 
-  handleChange = (event, value) => {
+  handleChange(event, value) {
     this.setState({ value });
-  };
+  }
 
   render() {
     const classes = this.props.classes;
