@@ -6,6 +6,7 @@
     "axios": "^0.16.2",
     "material-ui": "next",
     "material-ui-icons": "^1.0.0-alpha.19",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10"
@@ -15,9 +16,15 @@
     "build": "cross-env NODE_PATH=src react-scripts build",
     "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
     "eject": "cross-env NODE_PATH=src react-scripts eject",
-    "deploy": "npm run build && firebase deploy && echo \"Built and Deployed successfully\""
+    "deploy": "npm run build && firebase deploy && echo \"Built and Deployed successfully\"",
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "cross-env": "^5.0.1"
+    "cross-env": "^5.0.1",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "15.0.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "5.0.1",
+    "eslint-plugin-react": "7.1.0"
   }
 }
