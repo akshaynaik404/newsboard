@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
-import green from 'material-ui/colors/green';
 import Button from 'material-ui/Button';
 import Autorenew from 'material-ui-icons/Autorenew';
 
 const styleSheet = createStyleSheet('CircularFab', {
   wrapper: {
     position: 'fixed',
-    right: '10vw',
-    bottom: '10vw'
-  },
-  progress: {
-    color: green[500],
-    position: 'absolute',
-    top: -2,
-    left: -2,
+    width: '100%',
+    bottom: 16,
+    textAlign: 'center',
   },
 });
 
@@ -30,7 +24,7 @@ class CircularFab extends Component {
 
     return (
       <div className={classes.wrapper}>
-        <Button fab color="accent" onClick={this.handleButtonClick}>
+        <Button fab color="primary" onClick={this.handleButtonClick}>
           <Autorenew />
         </Button>
       </div>

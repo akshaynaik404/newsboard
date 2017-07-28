@@ -7,8 +7,10 @@ import Divider from 'material-ui/Divider';
 const styleSheet = createStyleSheet('NewsItems', theme => ({
 	root: {
 		width: '100%',
+		maxWidth: '640px',
 		background: theme.palette.background.paper,
-		marginTop: '56px'
+		margin: '0 auto',
+		marginTop: '56px',
 	}
 }));
 
@@ -22,7 +24,6 @@ function ListWithDividers (props) {
     <List className={props.classes.root}>
       {
         props.listItems.map(function (news) {
-					console.log(news);
           return (
             <a style={{textDecoration: 'none'}} href={news.url} target="_blank" key={news.publishedAt}>
               <ListItem button>

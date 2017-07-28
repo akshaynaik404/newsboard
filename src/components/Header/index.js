@@ -4,36 +4,33 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
 
-const styleSheet = createStyleSheet('ButtonAppBar', {
+const styleSheet = createStyleSheet('SimpleAppBar', {
   root: {
-    marginTop: 0,
-    width: '100%',
+    marginBottom: 8
   },
   flex: {
-    flex: 1,
+    justifyContent: 'center'
   },
 });
 
-function ButtonAppBar(props) {
+function SimpleAppBar(props) {
   const classes = props.classes;
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
-        <Toolbar>
-          <Typography type="title" color="inherit" className={classes.flex}>
+      <AppBar>
+        <Toolbar className={classes.flex}>
+          <Typography type="headline" color="inherit">
             Newsboard
           </Typography>
-          <Button color="contrast">Sign In</Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
 
-ButtonAppBar.propTypes = {
+SimpleAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styleSheet)(ButtonAppBar);
+export default withStyles(styleSheet)(SimpleAppBar);
