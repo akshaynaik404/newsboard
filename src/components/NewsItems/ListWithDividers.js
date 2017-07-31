@@ -9,8 +9,7 @@ const styleSheet = createStyleSheet('NewsItems', theme => ({
     width: '100%',
     maxWidth: '640px',
     background: theme.palette.background.paper,
-    margin: '0 auto',
-    marginTop: '56px',
+    margin: '56px auto',
   },
 }));
 
