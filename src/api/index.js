@@ -2,6 +2,6 @@ import axios from 'axios';
 
 export default {
   getNewsItems() {
-    return axios.get('https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=14d7c1ccdc5042c9b70b41aebde1348a');
+    return axios.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=ZL4OZZ5nk99JTJAbKYwA89ONuaNFiOzd');
   },
 };

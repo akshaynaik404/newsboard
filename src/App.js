@@ -21,25 +21,37 @@ class App extends Component {
     };
     this.componentDidMount = this.componentDidMount.bind(this);
     this.setError = this.setError.bind(this);
+    this.fetchData = this.fetchData.bind(this);
+  }
+
+  fetchData () {
+    this.setState({
+      isLoading: true,
+      error: null,
+    }, () => {
+      api
+      .getNewsItems()
+      .then((res = {}) => {
+        const result = (res.data && res.data.results) || [];
+        this.setState({ newsItems: result, isLoading: false, error: null });
+      })
+      .catch((err) => {
+        console.error(err);
+        this.setState({ isLoading: false, error: {
+          message: "Unable to fetch the latest news, Please try again later!"
+        }});
+      });
+    });
   }
 
   componentDidMount() {
-    this.setState({
-      isLoading: true,
-    });
-    api
-      .getNewsItems()
-      .then((res) => {
-        this.setState({ newsItems: res.data.articles, isLoading: false, error: null });
-      })
-      .catch((err) => {
-        this.setState({ isLoading: false, error: err });
-      });
+    this.fetchData();
   }
 
   setError(err) {
     this.setState({ error: err });
   }
+  
   render() {
     const { newsItems, isLoading, error } = this.state;
     return (
