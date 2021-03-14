@@ -2,7 +2,7 @@ This repository is a submission for ReactJS assignment of [Online Webinar - Reac
 <br />
 If selected you will get a chance to attend [Online Webiner - ReactJS Advance Level](https://www.youtube.com/watch?v=ty0rznt10Mg)
 <br />
-This is the source code for [Newsboard - Read and Share News](https://newsboard.tk) application.
+This is the source code for [Newsboard - Read and Share News](https://newsboard-302f0.web.app/) application.
 
 ## Assignment Requirements
 
@@ -17,7 +17,7 @@ This app is supposed to serve users who consume news and share local news articl
 
 ## How it works
 
-As of now the application renders latest news articles from [The Next Web](https://thenextweb.com) using [News API](https://newsapi.org/).
+As of now the application renders latest news articles from [The New York Times](https://www.nytimes.com/) using their [News API](https://developer.nytimes.com/).
 <br />
 UI components are generated using latest version of [Material-UI](https://github.com/callemall/material-ui/) component library.
 
